@@ -1,0 +1,26 @@
+{
+  "name": "asset-build-template",
+  "version": "1.0.0",
+  "description": "A template node.js project with assets compiler and tests",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^2.1.4",
+    "node-minify": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node assets --both-test",
+    "test-js" : "node assets --js-test",
+    "test-css" : "node assets --css-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/njb-said/asset-build-template.git"
+  },
+  "author": "njb_said",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/njb-said/asset-build-template/issues"
+  },
+  "homepage": "https://github.com/njb-said/asset-build-template#readme"
+}
