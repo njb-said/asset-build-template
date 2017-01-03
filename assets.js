@@ -72,7 +72,7 @@ var latestBuild = function(exitCb, errorSensitive, testType) {
                         return exitCb(2);
                     }
                 }
-                
+
                 finish[3] = (process.hrtime(start)[1] / 1000000).toFixed(3);
 
                 if(errorSensitive) {
@@ -84,7 +84,7 @@ var latestBuild = function(exitCb, errorSensitive, testType) {
         });
     }, function(cb) {
         var start = process.hrtime();
-        
+
         if(testType != 0 && testType != 1) {
             console.log('> Skipping CSS build');
             return cb();
@@ -104,7 +104,7 @@ var latestBuild = function(exitCb, errorSensitive, testType) {
                         return exitCb(3);
                     }
                 }
-                
+
                 finish[1] = (process.hrtime(start)[1] / 1000000).toFixed(3);
 
                 if(errorSensitive) {
@@ -116,12 +116,12 @@ var latestBuild = function(exitCb, errorSensitive, testType) {
         });
     }], function() {
         if(!errorSensitive) {
-            console.log('Assets build completed, JS took ' + finish[0] + 'ms, JS libraries took ' + finish[3] + 'ms and CSS took ' + finish[1] + 'ms');    
+            console.log('Assets build completed, JS took ' + finish[0] + 'ms, JS libraries took ' + finish[3] + 'ms and CSS took ' + finish[1] + 'ms');
         }
-        
+
         return exitCb(0);
     });
-}
+};
 
 module.exports.latestBuild = latestBuild;
 
