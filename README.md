@@ -1,4 +1,4 @@
-# asset-build-template
+# asset-build-template [![Build Status](https://travis-ci.org/njb-said/asset-build-template.svg?branch=master)](https://travis-ci.org/njb-said/asset-build-template)
 A template node.js project with assets compiler &amp; tests.
 
 ## Requirements
