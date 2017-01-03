@@ -30,6 +30,14 @@ NOTICE: Build is error sensitive!
 
 **To run tests on just CSS assets run:** `npm run test-css`
 
+## Contributing
+
+If you would like to contribute to this project, please do! Just keep a few things in mind:
+
+- [ESLint](http://eslint.org) is used to make sure code is up to standard
+- Pull requests must pass ESLint tests at [Travis CI](https://travis-ci.org/njb-said/asset-build-template)
+- Please use Spaces instead of tabs at a width of 4 for indenting
+
 ## Notes
 
 Using the npm scripts, the build will be error sensitive and fail if the minify library fails.
