@@ -1,73 +1,77 @@
 {
-    "name": "asset-build-template",
-    "version": "1.0.0",
-    "description": "A template node.js project with assets compiler and tests",
-    "main": "index.js",
-    "dependencies": {
-        "async": "^2.1.4",
-        "node-minify": "^2.0.2"
+  "name": "asset-build-template",
+  "version": "1.0.0",
+  "description": "A template node.js project with assets compiler and tests",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^2.1.4",
+    "node-minify": "^2.0.2",
+    "snyk": "^1.317.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  },
+  "scripts": {
+    "ci-test": "./node_modules/.bin/eslint .",
+    "test": "node assets --both-test",
+    "test-js": "node assets --js-test",
+    "test-css": "node assets --css-test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/njb-said/asset-build-template.git"
+  },
+  "author": "njb_said",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/njb-said/asset-build-template/issues"
+  },
+  "homepage": "https://github.com/njb-said/asset-build-template#readme",
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es6": true
     },
-    "devDependencies": {
-        "eslint": "^6.6.0"
-    },
-    "scripts": {
-        "ci-test" : "./node_modules/.bin/eslint .",
-        "test": "node assets --both-test",
-        "test-js": "node assets --js-test",
-        "test-css": "node assets --css-test"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/njb-said/asset-build-template.git"
-    },
-    "author": "njb_said",
-    "license": "GPL-3.0",
-    "bugs": {
-        "url": "https://github.com/njb-said/asset-build-template/issues"
-    },
-    "homepage": "https://github.com/njb-said/asset-build-template#readme",
-    "eslintConfig" : {
-        "env": {
-            "node": true,
-            "es6" : true
-        },
-        "extends": "eslint:recommended",
-        "rules": {
-            "indent": [
-                "error",
-                4
-            ],
-            "linebreak-style": [
-                "error",
-                "unix"
-            ],
-            "quotes": [
-                "error",
-                "single"
-            ],
-            "semi": [
-                "error",
-                "always"
-            ],
-            "no-unused-vars" : [
-                0
-            ],
-            "no-trailing-spaces" : [
-                "warn"
-            ],
-            "no-extra-semi" : [
-                "error"
-            ],
-            "no-console" : [
-                0
-            ],
-            "semi-spacing" : [
-                "error",
-                {
-                    "before": false,
-                    "after": true
-                }
-            ]
+    "extends": "eslint:recommended",
+    "rules": {
+      "indent": [
+        "error",
+        4
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "no-unused-vars": [
+        0
+      ],
+      "no-trailing-spaces": [
+        "warn"
+      ],
+      "no-extra-semi": [
+        "error"
+      ],
+      "no-console": [
+        0
+      ],
+      "semi-spacing": [
+        "error",
+        {
+          "before": false,
+          "after": true
         }
+      ]
     }
+  },
+  "snyk": true
 }
